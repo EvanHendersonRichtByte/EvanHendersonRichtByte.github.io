@@ -44,7 +44,7 @@ const Profile = (props) => {
               <tbody>
                 <tr>
                   <th>Name:</th>
-                  <td>Evan Henderson</td>
+                  <td>Galur Arasy Lumintang</td>
                 </tr>
                 <tr>
                   <th>Date of Birth:</th>
@@ -56,23 +56,18 @@ const Profile = (props) => {
                 </tr>
                 <tr>
                   <th>Address:</th>
-                  <td>29.116435, -57.918038</td>
+                  <td>Jl. Wendit Barat no.18, Malang, Jawa Timur, Indonesia</td>
                 </tr>
                 <tr>
                   <th>Phone:</th>
-                  <td>+62 8214141xxxx</td>
+                  <td>+62 82141413537</td>
                 </tr>
               </tbody>
             </table>
             {paragraphTrigger === "yes" && (
               <RightParagraphAnim>
                 <p className="pt-4">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
-                  interdum mi velit, ut viverra odio maximus a. Maecenas non
-                  feugiat nibh. Mauris vitae elementum tellus, et ornare mauris.
-                  Praesent semper placerat dictum. Orci varius natoque penatibus
-                  et magnis dis parturient montes, nascetur ridiculus mus.
-                  Curabitur iaculis dolor nunc,
+                Im a passionate technology learner from Indonesia
                 </p>
               </RightParagraphAnim>
             )}
