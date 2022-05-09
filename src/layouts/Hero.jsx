@@ -4,13 +4,16 @@ import Header from "../components/Navbar";
 
 const Hero = () => {
   return (
-    <header className="hero vh-100 align-items-center shadow">
-      <Header />
-      <BlockQuote
-        quote="Intelligence is the ability to adapt to change."
-        author="Stephen Hawking"
-      />
-    </header>
+    <>
+      <header className="hero vh-100 align-items-center shadow position-relative">
+        <Header />
+        <BlockQuote
+          quote="Intelligence is the ability to adapt to change."
+          author="Stephen Hawking"
+        />
+      </header>
+      <span className="hero__overlay"></span>
+    </>
   );
 };
 

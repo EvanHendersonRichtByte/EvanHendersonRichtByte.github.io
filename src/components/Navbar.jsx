@@ -4,7 +4,7 @@ const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-transparent">
       <a className="navbar-brand text-white-50" href="/">
-        Hender's Web
+        Arasy's Den
       </a>
       <button
         className="navbar-toggler"

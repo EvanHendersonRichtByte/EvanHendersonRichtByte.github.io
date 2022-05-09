@@ -9,7 +9,7 @@ const ProjectsCard = (props) => {
       className="card card-project mt-3"
       data-toggle="tooltip"
       data-placement="bottom"
-      title={props.projDesc}
+      title={props.projDescExt && props.projDescExt}
     >
       <img
         className="card-img-top"
@@ -17,7 +17,9 @@ const ProjectsCard = (props) => {
         alt={props.projImageAlt}
       />
       <div className="card-body text-left">
-        <h5 className="card-title">{props.projTitle}</h5>
+        <a href={props.projLink} target="__blank">
+          <h5 className="card-title">{props.projTitle}</h5>
+        </a>
         <div className="card-text">{props.projDesc}</div>
       </div>
     </div>

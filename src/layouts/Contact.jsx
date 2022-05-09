@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { HiOutlineMail } from "react-icons/hi";
 import { FiFacebook, FiSmartphone, FiTwitter } from "react-icons/fi";
-import { AiOutlineGithub } from "react-icons/ai";
+import { AiOutlineGithub, AiOutlineLinkedin } from "react-icons/ai";
 import { VscLocation } from "react-icons/vsc";
 import { Waypoint } from "react-waypoint";
 import styled, { keyframes } from "styled-components";
 import { pulse } from "react-animations";
 import { init, send } from "emailjs-com";
+import { FiLinkedin } from "react-icons/fi";
 
 const Contact = () => {
   // ? State Declaration
@@ -36,7 +37,7 @@ const Contact = () => {
     send("service_wwffwm4", "template_hknpbnd", templateParams).then(
       (res) => {
         console.log("Success!", res.status);
-        window.location.reload()
+        window.location.reload();
       },
       (err) => console.log("Failed", err)
     );
@@ -52,11 +53,10 @@ const Contact = () => {
                 <div className="col-md-6">
                   <h3>TALK TO ME</h3>
                   <p className="mb-3">
-                    Cards can be organized into Masonry-like columns with just
-                    CSS by wrapping them in .card-columns. Cards are built with
-                    CSS column properties instead of flexbox for easier
-                    alignment. Cards are ordered from top to bottom and left to
-                    right.
+                    I am a student who specializes in Front End Developer. I
+                    work with individuals and couples to help them build their
+                    websites. I'm a full-time student who is just looking for
+                    someone to talk to.
                   </p>
                   <table className="table table-borderless">
                     {contactTrigger === "yes" && (
@@ -138,32 +138,52 @@ const Contact = () => {
         <div className="container">
           <div className="row">
             <div className="col-md-6">
-              <h4>212</h4>
+              <h4>About Me</h4>
               <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s
+                I am a college student studying technology, and I am waiting to
+                hear from you to cooperate in the development of applications!
               </p>
             </div>
-            <div className="col-md-4 pt-4">
-              <p>
-                <span className="font-weight-bold">About Me</span> <br />
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry.
-              </p>
-            </div>
-            <div className="col-md-2 d-flex justify-content-center align-items-center text-center">
+            <div className="col-md-6 d-flex">
               <div className="row">
-                <div className="col-md-4">
+                <h4 className="ml-3">Contact</h4>
+                <div className="col-md-12 d-flex align-items-center">
+                  <div>
+                    <a
+                      className="text-light d-flex align-items-center"
+                      href="mailto:adamhenderson3x3@gmail.com"
+                      target="__blank"
+                    >
+                      <HiOutlineMail />
+                      <span className="ml-2">Adamhenderson3x3@gmail.com</span>
+                    </a>
+                    <a
+                      className="d-block w-100 text-light d-flex align-items-center"
+                      href="https://www.linkedin.com/in/galurarasy"
+                      target="__blank"
+                    >
+                      <AiOutlineLinkedin />
+                      <span className="ml-2">Galur Arasy Lumintang</span>
+                    </a>
+                  </div>
+                </div>
+                <div className="mt-3 col-md-12 d-flex align-items-center">
                   <FiFacebook className="footer-icon" />
-                </div>
-                <div className="col-md-4">
-                  <FiTwitter className="footer-icon" />
-                </div>
-                <div className="col-md-4">
-                  <AiOutlineGithub className="footer-icon" />
+                  <FiTwitter className="ml-4 footer-icon" />
+                  <a
+                    href="https://github.com/EvanHendersonRichtByte/"
+                    target="__blank"
+                    className="ml-4 footer-link"
+                  >
+                    <AiOutlineGithub className="footer-icon" />
+                  </a>
                 </div>
               </div>
+            </div>
+            <div className="col-md-4 mt-3 d-flex align-items-center">
+              <p className=" mt-2">
+                Copyright &copy;{new Date().getFullYear()}
+              </p>
             </div>
           </div>
         </div>
