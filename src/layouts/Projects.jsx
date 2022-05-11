@@ -18,7 +18,7 @@ import {
 const Projects = () => {
   const [cardTrigger, setCardTrigger] = useState("");
   const handleWaypointEnter = () => {
-    setCardTrigger("yes");
+    setTimeout(() => setCardTrigger("yes"), 200);
   };
   const ProjAnimR = keyframes`${slideInRight}`;
   const ProjectsAnimR = styled.div`
@@ -38,10 +38,10 @@ const Projects = () => {
   `;
   return (
     <section id="section-projects" className="section-projects container mt-4">
-      <Waypoint onEnter={handleWaypointEnter} />
       <h3 className="text-center text-main">Projects</h3>
       <hr className="border-main" />
       <div className="card-columns text-center">
+        <Waypoint onEnter={handleWaypointEnter} />
         {cardTrigger === "yes" && (
           <Fragment>
             <ProjectsAnimL>

@@ -7,8 +7,10 @@ const Profile = (props) => {
   const [imageTrigger, setImageTrigger] = useState("");
   const [paragraphTrigger, setParagraphTrigger] = useState("");
   const handleWaypointEnter = () => {
-    setImageTrigger("yes");
-    setParagraphTrigger("yes");
+    setTimeout(() => {
+      setImageTrigger("yes");
+      setParagraphTrigger("yes");
+    }, 300);
   };
   const slideInL = keyframes`${slideInLeft}`;
   const LeftImageAnim = styled.div`
@@ -19,7 +21,10 @@ const Profile = (props) => {
     animation: 2s ${fadeInR};
   `;
   return (
-    <section id="section-profile" className="section-profile container text-center my-4">
+    <section
+      id="section-profile"
+      className="section-profile container text-center my-4"
+    >
       <Waypoint onEnter={handleWaypointEnter} />
       <div className="profile-header ">
         <h3 className="text-main">About Me</h3>
@@ -67,7 +72,7 @@ const Profile = (props) => {
             {paragraphTrigger === "yes" && (
               <RightParagraphAnim>
                 <p className="pt-4">
-                Im a passionate technology learner from Indonesia
+                  Im a passionate technology learner from Indonesia
                 </p>
               </RightParagraphAnim>
             )}

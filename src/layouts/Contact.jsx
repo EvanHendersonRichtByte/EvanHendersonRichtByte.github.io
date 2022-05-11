@@ -7,7 +7,6 @@ import { Waypoint } from "react-waypoint";
 import styled, { keyframes } from "styled-components";
 import { pulse } from "react-animations";
 import { init, send } from "emailjs-com";
-import { FiLinkedin } from "react-icons/fi";
 
 const Contact = () => {
   // ? State Declaration
@@ -42,10 +41,33 @@ const Contact = () => {
       (err) => console.log("Failed", err)
     );
   };
+
+  const ContactList = () => (
+    <tbody>
+      <tr className="row">
+        <td>
+          <HiOutlineMail className="text-main" />
+        </td>
+        <td>adamhenderson3x3@gmail.com</td>
+      </tr>
+      <tr className="row">
+        <td>
+          <FiSmartphone className="text-main" />
+        </td>
+        <td>+62 82141413537</td>
+      </tr>
+      <tr className="row">
+        <td>
+          <VscLocation className="text-main" />
+        </td>
+        <td>Malang, East Java, Indonesia</td>
+      </tr>
+    </tbody>
+  );
+
   return (
     <section id="section-contact" className="section-contact">
       <div className="contact container-fluid bg-light">
-        <Waypoint onEnter={handleWaypointEnter} />
         <div className="container">
           <div className="row">
             <div className="col-md-12 mt-5">
@@ -59,29 +81,12 @@ const Contact = () => {
                     someone to talk to.
                   </p>
                   <table className="table table-borderless">
-                    {contactTrigger === "yes" && (
+                    {contactTrigger === "yes" ? (
                       <EmailAnim>
-                        <tbody>
-                          <tr className="row">
-                            <td>
-                              <HiOutlineMail className="text-main" />
-                            </td>
-                            <td>adamhenderson3x3@gmail.com</td>
-                          </tr>
-                          <tr className="row">
-                            <td>
-                              <FiSmartphone className="text-main" />
-                            </td>
-                            <td>+62 8214141xxxx</td>
-                          </tr>
-                          <tr className="row">
-                            <td>
-                              <VscLocation className="text-main" />
-                            </td>
-                            <td>29.116435, -57.918038</td>
-                          </tr>
-                        </tbody>
+                        <ContactList />
                       </EmailAnim>
+                    ) : (
+                      <ContactList />
                     )}
                   </table>
                 </div>
@@ -138,6 +143,7 @@ const Contact = () => {
         <div className="container">
           <div className="row">
             <div className="col-md-6">
+              <Waypoint onEnter={handleWaypointEnter} />
               <h4>About Me</h4>
               <p>
                 I am a college student studying technology, and I am waiting to
