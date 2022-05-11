@@ -28,5 +28,5 @@ jobs:
       - run: npm install
       - run: git config --global user.email "adamhenderson3x3@gmail.com"
       - run: git config --global user.name "EvanHendersonRichtByte"
-      - run: git remote set-url origin https://EvanHendersonRichtByte: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@github.com/EvanHendersonRichtByte/EvanHendersonRichtByte.github.io
+      - run: git remote set-url origin git@github.com:EvanHendersonRichtByte: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@github.com/EvanHendersonRichtByte/EvanHendersonRichtByte.github.io
       - run: npm run deploy
