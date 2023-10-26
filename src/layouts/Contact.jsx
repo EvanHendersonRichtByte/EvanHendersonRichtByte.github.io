@@ -54,7 +54,7 @@ const Contact = () => {
         <td>
           <FiSmartphone className="text-main" />
         </td>
-        <td>+62 82141413537</td>
+        <td>+62 66123121312</td>
       </tr>
       <tr className="row">
         <td>
