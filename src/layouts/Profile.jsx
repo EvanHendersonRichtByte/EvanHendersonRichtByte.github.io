@@ -1,6 +1,6 @@
 import React, { useState } from "react";
+import { fadeInRight, slideInLeft } from "react-animations";
 import { Waypoint } from "react-waypoint";
-import { slideInLeft, fadeInRight } from "react-animations";
 import styled, { keyframes } from "styled-components";
 import Avatar from "../assets/img/person.jpg";
 const Profile = (props) => {
@@ -65,7 +65,7 @@ const Profile = (props) => {
                 </tr>
                 <tr>
                   <th>Phone:</th>
-                  <td>+62 82141413537</td>
+                  <td>+62 4123124121</td>
                 </tr>
               </tbody>
             </table>
