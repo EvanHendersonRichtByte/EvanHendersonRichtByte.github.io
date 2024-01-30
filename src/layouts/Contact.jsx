@@ -52,12 +52,6 @@ const Contact = () => {
       </tr>
       <tr className="row">
         <td>
-          <FiSmartphone className="text-main" />
-        </td>
-        <td>+62 66123121312</td>
-      </tr>
-      <tr className="row">
-        <td>
           <VscLocation className="text-main" />
         </td>
         <td>Malang, East Java, Indonesia</td>
