@@ -20,4 +20,4 @@ CMD ["npm", "start"]
 # docker build -t evanightly.github.io .
 
 # Command to run container
-# docker run -p 3000:3000 -v "$(pwd):/app" --rm --name evanightly.github.io  -e CHOKIDAR_USEPOLLING=true evanightly.github.io
+# docker run -p 3000:3000 -v "$(pwd):/app" --rm --name evanightly.github.io -e CHOKIDAR_USEPOLLING=true evanightly.github.io
