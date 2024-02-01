@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { HiOutlineMail } from "react-icons/hi";
-import { FiFacebook, FiSmartphone, FiTwitter } from "react-icons/fi";
+import { FiFacebook, FiTwitter } from "react-icons/fi";
 import { AiOutlineGithub, AiOutlineLinkedin } from "react-icons/ai";
 import { VscLocation } from "react-icons/vsc";
 import { Waypoint } from "react-waypoint";
