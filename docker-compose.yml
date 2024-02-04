@@ -1,7 +1,13 @@
 services:
+  npm:
+    image: node::16.3.0-alpine3.11
+    working_dir: /app
+    volumes:
+      - .:/app    
   app:
     build: .
     volumes:
+      - /app/node_modules
       - .:/app
     ports:
       - "3000:3000"
@@ -9,4 +15,3 @@ services:
       - NODE_ENV=development
       - CHOKIDAR_USEPOLLING=true
       - PORT=3000
-    command: npm start
